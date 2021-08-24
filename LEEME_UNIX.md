@@ -1,4 +1,4 @@
-# Instalación / Configuración entorno ISD / 2020-2021 - Linux y macOS
+# Instalación / Configuración entorno ISD / 2021-2022 - Linux y macOS
 -------------------------------------------------------------------------------
 
 ## Descargar e instalar el SW
