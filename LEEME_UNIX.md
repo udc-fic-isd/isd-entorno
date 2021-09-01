@@ -72,14 +72,14 @@
             - Preferencias del sistema -> MySQL -> Elegir "Start MySQL when your computer starts up".
             - Más información: https://dev.mysql.com/doc/refman/8.0/en/osx-installation.html
     - Instalar como paquete el compilador de Apache Thrift:
-        - Se puede instalar de forma sencilla usando cualquiera de los dos siguientes gestores de paquetes: MacPorts o Homebrew.
-        - Si no tienes ninguno de estos gestores de paquetes en tu macOS, instala uno de ellos (el que prefieras):
-            - Instalación de MacPorts: https://www.macports.org/install.php.
+        - Se puede instalar de forma sencilla usando cualquiera de los dos siguientes gestores de paquetes: Homebrew o MacPorts.
+        - Si no tienes ninguno de estos gestores de paquetes en tu macOS, instala uno de ellos (preferentemente Homebrew):
             - Instalación de Homebrew: https://brew.sh/index_es.
-        - Instalación de Thrift con MacPorts:
-            - sudo port install thrift
+            - Instalación de MacPorts: https://www.macports.org/install.php.
         - Instalación de Thrift con Homebrew:
             - brew install thrift
+        - Instalación de Thrift con MacPorts:
+            - sudo port install thrift
         - IMPORTANTE: Si no se ha instalado la versión 0.14.2 (para saber la versión instalada basta con ejecutar
           `thrift -version`) es necesario crear o modificar el fichero `$HOME/.m2/settings.xml` para indicar la
           versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.13.0, el fichero debería tener el
