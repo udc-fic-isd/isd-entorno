@@ -105,8 +105,8 @@
 - Creación de bases de datos ws y wstest (ejecutar desde una consola)
 
 ```shell
-	mysqladmin -u root create ws -p
-	mysqladmin -u root create wstest -p
+    mysqladmin -u root create ws -p
+    mysqladmin -u root create wstest -p
 ```
 
 - Creación de usuario ws con password con permisos sobre ws y wstest
@@ -122,11 +122,11 @@
 - Comprobar acceso a BD
 
 ```shell
-	mysql -u ws --password=ws ws
-		exit
+    mysql -u ws --password=ws ws
+        exit
 
-	mysql -u ws --password=ws wstest
-		exit
+    mysql -u ws --password=ws wstest
+        exit
 ```
 
 ## Inicialización de datos de ejemplo y compilación de los ejemplos
@@ -134,8 +134,8 @@
 - Inicialización de la base de datos y compilación de los ejemplos
 
 ```shell
-	cd C:/software/ws-javaexamples-3.5.0
-	mvn sql:execute install
+    cd C:/software/ws-javaexamples-3.5.0
+    mvn sql:execute install
 ```
 	
 ## Configuración de IntelliJ IDEA
