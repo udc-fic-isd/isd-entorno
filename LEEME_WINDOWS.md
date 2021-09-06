@@ -114,9 +114,9 @@
 ```shell
 	mysql -u root -p
         CREATE USER 'ws'@'localhost' IDENTIFIED BY 'ws';
-		GRANT ALL PRIVILEGES ON ws.* to 'ws'@'localhost' WITH GRANT OPTION;
-		GRANT ALL PRIVILEGES ON wstest.* to 'ws'@'localhost' WITH GRANT OPTION;
-		exit
+        GRANT ALL PRIVILEGES ON ws.* to 'ws'@'localhost' WITH GRANT OPTION;
+        GRANT ALL PRIVILEGES ON wstest.* to 'ws'@'localhost' WITH GRANT OPTION;
+        exit
 ```
 
 - Comprobar acceso a BD
