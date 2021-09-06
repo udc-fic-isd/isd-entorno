@@ -112,7 +112,7 @@
 - Creación de usuario ws con password con permisos sobre ws y wstest
 
 ```shell
-	mysql -u root -p
+    mysql -u root -p
         CREATE USER 'ws'@'localhost' IDENTIFIED BY 'ws';
         GRANT ALL PRIVILEGES ON ws.* to 'ws'@'localhost' WITH GRANT OPTION;
         GRANT ALL PRIVILEGES ON wstest.* to 'ws'@'localhost' WITH GRANT OPTION;
