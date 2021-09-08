@@ -70,7 +70,7 @@
             - Descargar el instalador .dmg para macOS
             - Instalar con las opciones por defecto.
             - Preferencias del sistema -> MySQL -> Elegir "Start MySQL when your computer starts up".
-            - Más información: https://dev.mysql.com/doc/refman/8.0/en/osx-installation.html
+            - Más información: https://dev.mysql.com/doc/refman/8.0/en/macos-installation.html
     - Instalar como paquete el compilador de Apache Thrift:
         - Se puede instalar de forma sencilla usando cualquiera de los dos siguientes gestores de paquetes: Homebrew o MacPorts.
         - Si no tienes ninguno de estos gestores de paquetes en tu macOS, instala uno de ellos (preferentemente Homebrew):
