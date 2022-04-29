@@ -6,15 +6,13 @@
 > NOTA: Se recomienda utilizar un usuario de Windows sin espacios en el nombre 
   para evitar problemas con Maven.
 
-- Descargar y descomprimir en `C:\Program Files\Java` el siguiente software
+- Descargar y descomprimir en `C:\software` el siguiente software
     - Maven 3.8.x o superior 
         + https://maven.apache.org/download.cgi
         + Descargar el "Binary zip archive"
-
-- Descargar y descomprimir en `C:\software` el siguiente software
     - Tomcat 9.x 
-        + https://tomcat.apache.org/download-90.cgi
-        + En el apartado "Binary Distributions" / "Core" descargar el zip.
+      + https://tomcat.apache.org/download-90.cgi
+      + En el apartado "Binary Distributions" / "Core" descargar el zip.
 
 - Descargar e instalar AdoptOpenJDK 11
     - https://adoptopenjdk.net/
@@ -63,7 +61,7 @@
         + Por ejemplo:`C:\Program Files\AdoptOpenJDK\jdk-11.0.11.9-hotspot`
     - Nombre: `MAVEN_HOME`
         + Valor: Directorio donde se descomprimió Maven
-        + Por ejemplo: `C:\Program Files\Java\apache-maven-3.8.1`
+        + Por ejemplo: `C:\software\apache-maven-3.8.1`
     - Nombre: `MAVEN_OPTS`
         + Valor: `-Xms512m -Xmx1024m`
     - Nombre: `MYSQL_HOME`
