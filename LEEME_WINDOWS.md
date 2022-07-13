@@ -10,13 +10,12 @@
     - Maven 3.8.x o superior 
         + https://maven.apache.org/download.cgi
         + Descargar el "Binary zip archive"
-    - Tomcat 9.x 
-      + https://tomcat.apache.org/download-90.cgi
+    - Tomcat 10.0.x 
+      + https://tomcat.apache.org/download-10.cgi
       + En el apartado "Binary Distributions" / "Core" descargar el zip.
 
-- Descargar e instalar AdoptOpenJDK 11
-    - https://adoptopenjdk.net/
-    - Seleccionar la version "Open JDK 11 (LTS)" y la JVM "Hotspot".
+- Descargar e instalar la última versión LTS de Eclipse Temurin (JDK 17)
+    - https://adoptium.net
     - Descargar el instalador .msi para Windows e instalar usando las opciones por defecto.
 
 - Descargar e instalar IntelliJ IDEA
@@ -39,7 +38,7 @@
          + Debe introducirse una contraseña no vacía para el usuario `root` (e.g. `root`)
 
 - Descargar e instalar el compilador de Apache Thrift:
-     - http://www.apache.org/dyn/closer.cgi?path=/thrift/0.14.2/thrift-0.14.2.exe
+     - http://www.apache.org/dyn/closer.cgi?path=/thrift/0.16.0/thrift-0.16.0.exe
      - Renombrar el ejecutable a thrift.exe y copiarlo dentro del directorio bin que hay 
      dentro del directorio donde se descomprimió Maven 
      
@@ -57,11 +56,11 @@
   variables de entorno (para cada una pulsar en "Nueva ...", introducir el 
   nombre y el valor, y pulsar "Aceptar")
     - Nombre: `JAVA_HOME`
-        + Valor: Directorio donde se instaló AdoptOpenJDK
-        + Por ejemplo:`C:\Program Files\AdoptOpenJDK\jdk-11.0.11.9-hotspot`
+        + Valor: Directorio donde se instaló Eclipse Temurin (JDK 17)
+        + Por ejemplo:`C:\Program Files\Eclipse Adoptium\jdk-17.0.3.7-hotspot`
     - Nombre: `MAVEN_HOME`
         + Valor: Directorio donde se descomprimió Maven
-        + Por ejemplo: `C:\software\apache-maven-3.8.1`
+        + Por ejemplo: `C:\software\apache-maven-3.8.5`
     - Nombre: `MAVEN_OPTS`
         + Valor: `-Xms512m -Xmx1024m`
     - Nombre: `MYSQL_HOME`
@@ -132,7 +131,7 @@
 - Inicialización de la base de datos y compilación de los ejemplos
 
 ```shell
-    cd C:/software/ws-javaexamples-3.5.0
+    cd C:/software/ws-javaexamples-3.6.0
     mvn sql:execute install
 ```
 	
@@ -142,13 +141,13 @@
 
 ## Configuración de Tomcat
 
-- Copiar el driver JDBC de MySQL al directorio `C:\software\apache-tomcat-9.0.x\lib`
+- Copiar el driver JDBC de MySQL al directorio `C:\software\apache-tomcat-10.0.x\lib`
     - El driver JDBC se puede obtener de la siguiente ruta (siempre y cuando se hayan compilado previamente 
     los ejemplos):
-     `%HOME%\.m2\repository\mysql\mysql-connector-java\8.0.20\mysql-connector-java-8.0.20.jar` 
+     `%HOME%\.m2\repository\mysql\mysql-connector-java\8.0.29\mysql-connector-java-8.0.29.jar` 
 
 - Definir un data source con nombre `jdbc/ws-javaexamples-ds`
-    - Añadir las siguientes líneas al fichero `C:\software\apache-tomcat-9.0.x\conf\server.xml`, 
+    - Añadir las siguientes líneas al fichero `C:\software\apache-tomcat-10.0.x\conf\server.xml`, 
       dentro de la etiqueta `<GlobalNamingResources>`
  
       ```shell
@@ -168,7 +167,7 @@
                 logAbandoned="true"
                 validationQuery="SELECT 1"/>
 	  ```	
-    - Añadir las siguientes líneas al fichero `C:\software\apache-tomcat-9.0.x\conf\context.xml`, 
+    - Añadir las siguientes líneas al fichero `C:\software\apache-tomcat-10.0.x\conf\context.xml`, 
       dentro de la etiqueta `<Context>`
 
       ```shell
@@ -214,7 +213,9 @@
 ```shell
     ssh-keygen -t rsa -b 4096 -C "your_email@udc.es"
 ```    
-
+## Añadir clave SSH a GitHub
+> NOTA: Este paso no es necesario si ya se utilizó GitHub con SSH en otras asignaturas
+> 
 - Acceder a [https://github.com/settings/keys](https://github.com/settings/keys).
 - Clic en "New SSH Key" para añadir una nueva clave SSH.
 - En el campo "Title" ponerle un nombre.

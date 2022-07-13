@@ -13,21 +13,18 @@
                 + Se puede utilizar la versión Community (libre) o la versión Ultimate
                   (solicitando una licencia para estudiantes según se indica en
                   https://www.jetbrains.com/es-es/community/education/#students).
+        - Última versión LTS de Eclipse Temurin (JDK 17)
+            - https://adoptium.net
+            - Descargar el arhivo .tar.gz.
     - Instalar como paquete
-        - AdoptOpenJDK 11
-            - Instalar como paquete siguiendo las instrucciones que se 
-              indican en la sección "Linux RPM and DEB installer packages" de 
-              https://adoptopenjdk.net/installation.html.
-            - Instalar la version "Open JDK 11 (LTS)" con la JVM "Hotspot"
-              (adoptopenjdk-11-hotspot).
         - MySQL 8
             - Seguir las instrucciones que se indican en 
               https://dev.mysql.com/doc/refman/8.0/en/linux-installation.html
     - Instalar el compilador de Apache Thrift
-        > NOTA: La versión recomendada es la 0.14.2, pero se puede instalar cualquier versión
-          comprendida entre la 0.9.1 y la 0.14.2
+        > NOTA: La versión recomendada es la 0.16.0, pero se puede instalar cualquier versión
+          comprendida entre la 0.9.1 y la 0.16.0
         - Instalarlo como paquete si está disponible para la distribución Linux utilizada
-            - Ubuntu 20.04, 18.04, 16.04
+            - Ubuntu
                - sudo apt-get update -y
                - sudo apt-get install -y thrift-compiler 
             - Alpine, ALT Linux, Arch Linux, CentOS, Fedora, FreeBSD, Mageia, NetBSD, openSUSE, Slackware
@@ -35,16 +32,16 @@
             - Debian
                - Descargar paquete de https://packages.debian.org/sid/thrift-compiler e instalarlo
         - En otro caso, seguir las instrucciones de https://thrift.apache.org/docs/install/
-        - IMPORTANTE: Si no se ha instalado la versión 0.14.2 (para saber la versión instalada basta con ejecutar
+        - IMPORTANTE: Si no se ha instalado la versión 0.16.0 (para saber la versión instalada basta con ejecutar
           `thrift -version`) es necesario crear o modificar el fichero `$HOME/.m2/settings.xml` para indicar la 
-          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.13.0, el fichero debería tener el
+          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.15.2, el fichero debería tener el
           siguiente contenido (en caso de que el fichero ya exista, hay que añadir la etiqueta `<activeProfiles>` 
           dentro de la etiqueta `<settings>`):   
 
             ```shell
             <settings>
                 <activeProfiles>
-                    <activeProfile>thrift-0.13.0</activeProfile>
+                    <activeProfile>thrift-0.15.2</activeProfile>
                 </activeProfiles>
             </settings>
             ```
@@ -61,10 +58,9 @@
                   (solicitando una licencia para estudiantes según se indica en
                   https://www.jetbrains.com/es-es/community/education/#students).
             - Instalar usando las opciones por defecto.
-        - AdoptOpenJDK 11
-            - https://adoptopenjdk.net/
-            - Seleccionar la version "Open JDK 11 (LTS)" y la JVM "Hotspot".
-            - Descargar el instalador .pkg para macOS e instalar usando las opciones por defecto.
+        - Última versión LTS de Eclipse Temurin (JDK 17)
+            - https://adoptium.net
+            - Descargar el instalador .pkg e instalar usando las opciones por defecto.
         - MySQL 8
             - https://dev.mysql.com/downloads/mysql/
             - Descargar el instalador .dmg para macOS
@@ -80,23 +76,23 @@
             - brew install thrift
         - Instalación de Thrift con MacPorts:
             - sudo port install thrift
-        - IMPORTANTE: Si no se ha instalado la versión 0.14.2 (para saber la versión instalada basta con ejecutar
+        - IMPORTANTE: Si no se ha instalado la versión 0.16.0 (para saber la versión instalada basta con ejecutar
           `thrift -version`) es necesario crear o modificar el fichero `$HOME/.m2/settings.xml` para indicar la
-          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.13.0, el fichero debería tener el
+          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.15.2, el fichero debería tener el
           siguiente contenido (en caso de que el fichero ya exista, hay que añadir la etiqueta `<activeProfiles>`
           dentro de la etiqueta `<settings>`):
 
             ```shell
             <settings>
                 <activeProfiles>
-                    <activeProfile>thrift-0.13.0</activeProfile>
+                    <activeProfile>thrift-0.15.2</activeProfile>
                 </activeProfiles>
             </settings>
             ```
 
 - [Linux y macOS] Descargar y descomprimir en `$HOME/software` el siguiente software
-    - Tomcat 9.x 
-        + https://tomcat.apache.org/download-90.cgi
+    - Tomcat 10.0.x 
+        + https://tomcat.apache.org/download-10.cgi
         + En el apartado "Binary Distributions" / "Core" descargar el .tar.gz.
          
 ## Descargar y descomprimir los ejemplos de la asignatura
@@ -106,7 +102,7 @@
 
 ```shell
     cd $HOME/software
-    tar zxf ws-javaexamples-3.5.0-src.tar.gz
+    tar zxf ws-javaexamples-3.6.0-src.tar.gz
 ```
 
 ## [Linux] Establecer variables de entorno
@@ -116,13 +112,12 @@
   directorios donde se haya descomprimido Maven e IntelliJ IDEA, e instalado AdoptOpenJDK, respectivamente
 
 ```shell
-    # AdoptOpenJDK (Linux)
-    export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
-
+    # Eclipse Temurin
+    export JAVA_HOME=$HOME/software/jdk-17.0.3+7
     PATH=$JAVA_HOME/bin:$PATH
 
     # Maven
-    MAVEN_HOME=$HOME/software/apache-maven-3.8.1
+    MAVEN_HOME=$HOME/software/apache-maven-3.8.5
     PATH=$MAVEN_HOME/bin:$PATH
     export MAVEN_OPTS="-Xms512m -Xmx1024m"
 
@@ -139,6 +134,7 @@
 ```shell
     which java
     which mvn
+    which mysql
     which idea.sh
 ```
 
@@ -153,13 +149,12 @@
   directorios donde se haya descomprimido Maven e instalado AdoptOpenJDK respectivamente
 
 ```shell
-    # AdoptOpenJDK (macOS)
-    export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
-
+    # Eclipse Temurin (JDK 17)
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
     PATH=$JAVA_HOME/bin:$PATH
-
+    
     # Maven
-    MAVEN_HOME=$HOME/software/apache-maven-3.8.1
+    MAVEN_HOME=$HOME/software/apache-maven-3.8.5
     PATH=$MAVEN_HOME/bin:$PATH
     export MAVEN_OPTS="-Xms512m -Xmx1024m"
 
@@ -176,6 +171,7 @@
 ```shell
     which java
     which mvn
+    which mysql
 ```
     
 ## Creación de bases de datos necesarias para los ejemplos
@@ -222,7 +218,7 @@
 - Inicialización de la base de datos y compilación de los ejemplos
 
 ```shell
-    cd $HOME/software/ws-javaexamples-3.5.0
+    cd $HOME/software/ws-javaexamples-3.6.0
     mvn sql:execute install
 ```
     
@@ -239,14 +235,14 @@
 
 
 ## Configuración de Tomcat
-> NOTA: Se asume que Tomcat está descomprimido en el directorio `$HOME/software/apache-tomcat-9.0.x`
+> NOTA: Se asume que Tomcat está descomprimido en el directorio `$HOME/software/apache-tomcat-10.0.x`
 
-- Copiar el driver JDBC de MySQL al directorio `$HOME/software/apache-tomcat-9.0.x/lib`
+- Copiar el driver JDBC de MySQL al directorio `$HOME/software/apache-tomcat-10.0.x/lib`
     - El driver JDBC se puede obtener de la siguiente ruta (siempre y cuando se hayan compilado previamente los ejemplos):
-     `$HOME/.m2/repository/mysql/mysql-connector-java/8.0.20/mysql-connector-java-8.0.20.jar` 
+     `$HOME/.m2/repository/mysql/mysql-connector-java/8.0.29/mysql-connector-java-8.0.29.jar` 
 
 - Definir un data source con nombre `jdbc/ws-javaexamples-ds`
-    - Añadir las siguientes líneas al fichero `$HOME/software/apache-tomcat-9.0.x/conf/server.xml`, 
+    - Añadir las siguientes líneas al fichero `$HOME/software/apache-tomcat-10.0.x/conf/server.xml`, 
       dentro de la etiqueta `<GlobalNamingResources>`
 
       ```shell
@@ -266,7 +262,7 @@
                 logAbandoned="true"
                 validationQuery="SELECT 1"/>
 	  ```	
-    - Añadir las siguientes líneas al fichero `$HOME/software/apache-tomcat-9.0.x/conf/context.xml`, 
+    - Añadir las siguientes líneas al fichero `$HOME/software/apache-tomcat-10.0.x/conf/context.xml`, 
       dentro de la etiqueta `<Context>`
 
       ```shell
@@ -308,7 +304,7 @@
     - Seguir las instrucciones indicadas en https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion
 
 ## Creación y configuración de claves SSH
-> NOTA: Este paso no es necesario si ya utilizó Git en otras asignaturas
+> NOTA: Este paso no es necesario si ya utilizó Git con SSH en otras asignaturas
 
 - Desde un terminal ejecutar:
 
@@ -318,6 +314,9 @@
 ```shell
     ssh-keygen -t rsa -b 4096 -C "your_email@udc.es"
 ```
+
+## Añadir clave SSH a GitHub
+> NOTA: Este paso no es necesario si ya se utilizó GitHub con SSH en otras asignaturas
 
 - Acceder a [https://github.com/settings/keys](https://github.com/settings/keys).
 - Clic en "New SSH Key" para añadir una nueva clave SSH.
