@@ -1,4 +1,4 @@
-# Instalación / Configuración entorno ISD / 2021-2022 - Linux y macOS
+# Instalación / Configuración entorno ISD / 2022-2023 - Linux y macOS
 -------------------------------------------------------------------------------
 
 ## Descargar e instalar el SW
@@ -109,15 +109,15 @@
 - Añadir al fichero `$HOME/.bashrc` lo siguiente 
 
 > NOTA: Los valores de las variables MAVEN_HOME, IDEA_HOME y JAVA_HOME deben sustituirse por los 
-  directorios donde se haya descomprimido Maven e IntelliJ IDEA, e instalado AdoptOpenJDK, respectivamente
+  directorios donde se haya descomprimido Maven e IntelliJ IDEA, e instalado Eclipse Temurin, respectivamente
 
 ```shell
     # Eclipse Temurin
-    export JAVA_HOME=$HOME/software/jdk-17.0.3+7
+    export JAVA_HOME=$HOME/software/jdk-17.0.4+8
     PATH=$JAVA_HOME/bin:$PATH
 
     # Maven
-    MAVEN_HOME=$HOME/software/apache-maven-3.8.5
+    MAVEN_HOME=$HOME/software/apache-maven-3.8.6
     PATH=$MAVEN_HOME/bin:$PATH
     export MAVEN_OPTS="-Xms512m -Xmx1024m"
 
@@ -146,7 +146,7 @@
   `$HOME/.bash_profile` (versiones anteriores de macOS) lo siguiente:
 
 > NOTA: Los valores de las variables MAVEN_HOME y JAVA_HOME deben sustituirse por los 
-  directorios donde se haya descomprimido Maven e instalado AdoptOpenJDK respectivamente
+  directorios donde se haya descomprimido Maven e instalado Eclipse Temurin respectivamente
 
 ```shell
     # Eclipse Temurin (JDK 17)
@@ -154,7 +154,7 @@
     PATH=$JAVA_HOME/bin:$PATH
     
     # Maven
-    MAVEN_HOME=$HOME/software/apache-maven-3.8.5
+    MAVEN_HOME=$HOME/software/apache-maven-3.8.6
     PATH=$MAVEN_HOME/bin:$PATH
     export MAVEN_OPTS="-Xms512m -Xmx1024m"
 

@@ -1,4 +1,4 @@
-# Instalación / Configuración entorno ISD / 2021-2022 - Windows
+# Instalación / Configuración entorno ISD / 2022-2023 - Windows
 -------------------------------------------------------------------------------
 
 ## Descargar e instalar el SW
@@ -57,7 +57,7 @@
   nombre y el valor, y pulsar "Aceptar")
     - Nombre: `JAVA_HOME`
         + Valor: Directorio donde se instaló Eclipse Temurin (JDK 17)
-        + Por ejemplo:`C:\Program Files\Eclipse Adoptium\jdk-17.0.3.7-hotspot`
+        + Por ejemplo:`C:\Program Files\Eclipse Adoptium\jdk-17.0.4.8-hotspot`
     - Nombre: `MAVEN_HOME`
         + Valor: Directorio donde se descomprimió Maven
         + Por ejemplo: `C:\software\apache-maven-3.8.5`
@@ -200,7 +200,7 @@
 > El siguiente comando ilustra como configurar Sublime como editor por defecto de Git, aunque se puede utilizar otro editor instalado en el sistema operativo.
     
 ```shell
-    git config --global core.editor "'C:\Program Files\Sublime Text 3\sublime_text.exe' -w"
+    git config --global core.editor "'C:\Program Files\Sublime Text\sublime_text.exe' -w"
 ```
 
 ## Creación y configuración de claves SSH
