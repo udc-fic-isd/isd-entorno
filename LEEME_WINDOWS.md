@@ -29,13 +29,15 @@
     - https://dev.mysql.com/downloads/mysql/
         + Descargar el instalador .msi para Windows
     - Instalar en la ruta por defecto.
-    - Comprobar que la opción "Start the MySQL Server at System Startup"
-      está marcada, para que se instale como servicio Windows.
     - Elegir "Server only" o "Custom" (para instalar Server + Workbench) y usar 
      las opciones por defecto.
     - Después de la instalación, se ejecutará el wizard de Configuración de 
-     MySQL Server. Utilizar las opciones por defecto excepto las siguientes:
-         + Debe introducirse una contraseña no vacía para el usuario `root` (e.g. `root`)
+     MySQL Server. 
+         + Utilizar las opciones por defecto excepto la contraseña para el 
+         usuario `root`, que no debe dejarse vacía (puede usarse, por ejemplo, 
+         `root`)
+         + Comprobar que la opción "Start the MySQL Server at System Startup"
+         está marcada, para que se instale como servicio Windows.
 
 - Descargar e instalar el compilador de Apache Thrift:
      - http://www.apache.org/dyn/closer.cgi?path=/thrift/0.16.0/thrift-0.16.0.exe
