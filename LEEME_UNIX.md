@@ -54,7 +54,8 @@
     - Deescargar e instalar
         - IntelliJ IDEA
             - https://www.jetbrains.com/es-es/idea/download
-                + Se puede utilizar la versión Community (libre) o la versión Ultimate
+                + Descargar el instalador .dmg para macOS
+                + NOTA: se puede utilizar la versión Community (libre) o la versión Ultimate
                   (solicitando una licencia para estudiantes según se indica en
                   https://www.jetbrains.com/es-es/community/education/#students).
             - Instalar usando las opciones por defecto.
@@ -63,7 +64,7 @@
             - Descargar el instalador .pkg e instalar usando las opciones por defecto.
         - MySQL 8
             - https://dev.mysql.com/downloads/mysql/
-            - Descargar el instalador .dmg para macOS
+            - Descargar el instalador .dmg para macOS.
             - Instalar con las opciones por defecto.
             - Preferencias del sistema -> MySQL -> Elegir "Start MySQL when your computer starts up".
             - Más información: https://dev.mysql.com/doc/refman/8.0/en/macos-installation.html
@@ -283,7 +284,7 @@
      
 - Instalación en macOS
     - https://git-scm.com/downloads
-    - Hacer clic en "MacOs". En la siguiente pantalla hacer clic en "installer"
+    - Hacer clic en "macOS". En la siguiente pantalla hacer clic en "installer"
       dentro de la sección "Binary Installer" y descargar la última versión del instalador .dmg.
     - Instalar con las opciones por defecto.
 
