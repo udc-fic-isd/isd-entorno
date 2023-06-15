@@ -139,6 +139,8 @@
 	
 ## Configuración de IntelliJ IDEA
 - Se recomienda instalar el plugin de Thrift (lo sugerirá el editor al abrir un fichero .thrift)
+- Se recomienda configurar "Command Prompt" como el terminal por defecto. Se puede hacer en el wizard 
+  `File > Settings > Tools > Terminal` seleccionando `C:\Windows\system32\cmd.exe` como valor de `Shell path`
 
 
 ## Configuración de Tomcat
