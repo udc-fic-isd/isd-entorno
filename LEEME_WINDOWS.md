@@ -1,4 +1,4 @@
-# Instalación / Configuración entorno ISD / 2022-2023 - Windows
+# Instalación / Configuración entorno ISD / 2023-2024 - Windows
 -------------------------------------------------------------------------------
 
 ## Descargar e instalar el SW
@@ -7,7 +7,7 @@
   para evitar problemas con Maven.
 
 - Descargar y descomprimir en `C:\software` el siguiente software
-    - Maven 3.8.x o superior 
+    - Maven 3.9.x o superior 
         + https://maven.apache.org/download.cgi
         + Descargar el "Binary zip archive"
     - Tomcat 10.0.x 
@@ -40,7 +40,7 @@
          está marcada, para que se instale como servicio Windows.
 
 - Descargar e instalar el compilador de Apache Thrift:
-     - http://www.apache.org/dyn/closer.cgi?path=/thrift/0.16.0/thrift-0.16.0.exe
+     - http://www.apache.org/dyn/closer.cgi?path=/thrift/0.18.1/thrift-0.18.1.exe
      - Renombrar el ejecutable a thrift.exe y copiarlo dentro del directorio bin que hay 
      dentro del directorio donde se descomprimió Maven 
      
@@ -59,10 +59,10 @@
   nombre y el valor, y pulsar "Aceptar")
     - Nombre: `JAVA_HOME`
         + Valor: Directorio donde se instaló Eclipse Temurin (JDK 17)
-        + Por ejemplo:`C:\Program Files\Eclipse Adoptium\jdk-17.0.4.101-hotspot`
+        + Por ejemplo:`C:\Program Files\Eclipse Adoptium\jdk-17.0.8.7-hotspot`
     - Nombre: `MAVEN_HOME`
         + Valor: Directorio donde se descomprimió Maven
-        + Por ejemplo: `C:\software\apache-maven-3.8.5`
+        + Por ejemplo: `C:\software\apache-maven-3.9.3`
     - Nombre: `MAVEN_OPTS`
         + Valor: `-Xms512m -Xmx1024m`
     - Nombre: `MYSQL_HOME`
@@ -133,7 +133,7 @@
 - Inicialización de la base de datos y compilación de los ejemplos
 
 ```shell
-    cd C:/software/ws-javaexamples-3.6.0
+    cd C:/software/ws-javaexamples-3.7.0
     mvn sql:execute install
 ```
 	
@@ -148,7 +148,7 @@
 - Copiar el driver JDBC de MySQL al directorio `C:\software\apache-tomcat-10.0.x\lib`
     - El driver JDBC se puede obtener de la siguiente ruta (siempre y cuando se hayan compilado previamente 
     los ejemplos):
-     `%HOME%\.m2\repository\mysql\mysql-connector-java\8.0.29\mysql-connector-java-8.0.29.jar` 
+     `%HOME%\.m2\repository\mysql\mysql-connector-java\8.0.33\mysql-connector-java-8.0.33.jar` 
 
 - Definir un data source con nombre `jdbc/ws-javaexamples-ds`
     - Añadir las siguientes líneas al fichero `C:\software\apache-tomcat-10.0.x\conf\server.xml`, 
