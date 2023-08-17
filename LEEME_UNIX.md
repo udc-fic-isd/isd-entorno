@@ -118,7 +118,7 @@
     PATH=$JAVA_HOME/bin:$PATH
 
     # Maven
-    MAVEN_HOME=$HOME/software/apache-maven-3.9.3
+    MAVEN_HOME=$HOME/software/apache-maven-3.9.4
     PATH=$MAVEN_HOME/bin:$PATH
     export MAVEN_OPTS="-Xms512m -Xmx1024m"
 
@@ -155,7 +155,7 @@
     PATH=$JAVA_HOME/bin:$PATH
     
     # Maven
-    MAVEN_HOME=$HOME/software/apache-maven-3.9.3
+    MAVEN_HOME=$HOME/software/apache-maven-3.9.4
     PATH=$MAVEN_HOME/bin:$PATH
     export MAVEN_OPTS="-Xms512m -Xmx1024m"
 
@@ -240,7 +240,7 @@
 
 - Copiar el driver JDBC de MySQL al directorio `$HOME/software/apache-tomcat-10.0.x/lib`
     - El driver JDBC se puede obtener de la siguiente ruta (siempre y cuando se hayan compilado previamente los ejemplos):
-     `$HOME/.m2/repository/mysql/mysql-connector-java/8.0.33/mysql-connector-java-8.0.33.jar` 
+     `$HOME/.m2/repository/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar`
 
 - Definir un data source con nombre `jdbc/ws-javaexamples-ds`
     - Añadir las siguientes líneas al fichero `$HOME/software/apache-tomcat-10.0.x/conf/server.xml`, 

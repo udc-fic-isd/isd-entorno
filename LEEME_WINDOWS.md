@@ -62,7 +62,7 @@
         + Por ejemplo:`C:\Program Files\Eclipse Adoptium\jdk-17.0.8.7-hotspot`
     - Nombre: `MAVEN_HOME`
         + Valor: Directorio donde se descomprimió Maven
-        + Por ejemplo: `C:\software\apache-maven-3.9.3`
+        + Por ejemplo: `C:\software\apache-maven-3.9.4`
     - Nombre: `MAVEN_OPTS`
         + Valor: `-Xms512m -Xmx1024m`
     - Nombre: `MYSQL_HOME`
@@ -148,7 +148,7 @@
 - Copiar el driver JDBC de MySQL al directorio `C:\software\apache-tomcat-10.0.x\lib`
     - El driver JDBC se puede obtener de la siguiente ruta (siempre y cuando se hayan compilado previamente 
     los ejemplos):
-     `%HOME%\.m2\repository\mysql\mysql-connector-java\8.0.33\mysql-connector-java-8.0.33.jar` 
+     `%HOME%\.m2\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar`
 
 - Definir un data source con nombre `jdbc/ws-javaexamples-ds`
     - Añadir las siguientes líneas al fichero `C:\software\apache-tomcat-10.0.x\conf\server.xml`, 
