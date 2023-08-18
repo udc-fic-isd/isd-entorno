@@ -27,7 +27,7 @@
             - Ubuntu
                - sudo apt-get update -y
                - sudo apt-get install -y thrift-compiler 
-            - Alpine, ALT Linux, Arch Linux, CentOS, Fedora, FreeBSD, Mageia, NetBSD, openSUSE, Slackware
+            - Alpine, ALT Linux, Arch Linux, CentOS, Fedora, FreeBSD, Mageia, NetBSD, openSUSE, Void Linux
                - Descargar paquete de https://pkgs.org/download/thrift e instalarlo
             - Debian
                - Descargar paquete de https://packages.debian.org/sid/thrift-compiler e instalarlo
