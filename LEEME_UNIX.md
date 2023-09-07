@@ -21,8 +21,8 @@
             - Seguir las instrucciones que se indican en 
               https://dev.mysql.com/doc/refman/8.0/en/linux-installation.html
     - Instalar el compilador de Apache Thrift
-        > NOTA: La versión recomendada es la 0.18.1, pero se puede instalar cualquier versión
-          comprendida entre la 0.10.0 y la 0.18.1
+        > NOTA: La versión recomendada es la 0.19.0, pero se puede instalar cualquier versión
+          comprendida entre la 0.10.0 y la 0.19.0
         - Instalarlo como paquete si está disponible para la distribución Linux utilizada
             - Ubuntu
                - sudo apt-get update -y
@@ -32,16 +32,16 @@
             - Debian
                - Descargar paquete de https://packages.debian.org/sid/thrift-compiler e instalarlo
         - En otro caso, seguir las instrucciones de https://thrift.apache.org/docs/install/
-        - IMPORTANTE: Si no se ha instalado la versión 0.18.1 (para saber la versión instalada basta con ejecutar
+        - IMPORTANTE: Si no se ha instalado la versión 0.19.0 (para saber la versión instalada basta con ejecutar
           `thrift -version`) es necesario crear o modificar el fichero `$HOME/.m2/settings.xml` para indicar la 
-          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.15.0, el fichero debería tener el
+          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.18.1, el fichero debería tener el
           siguiente contenido (en caso de que el fichero ya exista, hay que añadir la etiqueta `<activeProfiles>` 
           dentro de la etiqueta `<settings>`):   
 
             ```shell
             <settings>
                 <activeProfiles>
-                    <activeProfile>thrift-0.15.0</activeProfile>
+                    <activeProfile>thrift-0.18.1</activeProfile>
                 </activeProfiles>
             </settings>
             ```
@@ -77,16 +77,16 @@
             - brew install thrift
         - Instalación de Thrift con MacPorts:
             - sudo port install thrift
-        - IMPORTANTE: Si no se ha instalado la versión 0.16.0 (para saber la versión instalada basta con ejecutar
+        - IMPORTANTE: Si no se ha instalado la versión 0.19.0 (para saber la versión instalada basta con ejecutar
           `thrift -version`) es necesario crear o modificar el fichero `$HOME/.m2/settings.xml` para indicar la
-          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.15.0, el fichero debería tener el
+          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.18.1, el fichero debería tener el
           siguiente contenido (en caso de que el fichero ya exista, hay que añadir la etiqueta `<activeProfiles>`
           dentro de la etiqueta `<settings>`):
 
             ```shell
             <settings>
                 <activeProfiles>
-                    <activeProfile>thrift-0.15.0</activeProfile>
+                    <activeProfile>thrift-0.18.1</activeProfile>
                 </activeProfiles>
             </settings>
             ```
