@@ -40,7 +40,7 @@
          está marcada, para que se instale como servicio Windows.
 
 - Descargar e instalar el compilador de Apache Thrift:
-     - http://www.apache.org/dyn/closer.cgi?path=/thrift/0.18.1/thrift-0.18.1.exe
+     - http://www.apache.org/dyn/closer.cgi?path=/thrift/0.19.0/thrift-0.19.0.exe
      - Renombrar el ejecutable a thrift.exe y copiarlo dentro del directorio bin que hay 
      dentro del directorio donde se descomprimió Maven 
      
