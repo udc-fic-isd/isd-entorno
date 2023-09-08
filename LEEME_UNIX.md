@@ -114,7 +114,7 @@
 
 ```shell
     # Eclipse Temurin
-    export JAVA_HOME=$HOME/software/jdk-17.0.8+7
+    export JAVA_HOME=$HOME/software/jdk-17.0.8.1+1
     PATH=$JAVA_HOME/bin:$PATH
 
     # Maven
