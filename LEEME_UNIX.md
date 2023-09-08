@@ -17,9 +17,10 @@
             - https://adoptium.net
             - Descargar el arhivo .tar.gz.
     - Instalar como paquete
-        - MySQL 8
+        - MySQL 8.0.x
             - Seguir las instrucciones que se indican en 
-              https://dev.mysql.com/doc/refman/8.0/en/linux-installation.html
+              https://dev.mysql.com/doc/refman/8.0/en/linux-installation.html para instalar
+              la versión 8.0.x
     - Instalar el compilador de Apache Thrift
         > NOTA: La versión recomendada es la 0.19.0, pero se puede instalar cualquier versión
           comprendida entre la 0.10.0 y la 0.19.0
@@ -62,9 +63,9 @@
         - Última versión LTS de Eclipse Temurin (JDK 17)
             - https://adoptium.net
             - Descargar el instalador .pkg e instalar usando las opciones por defecto.
-        - MySQL 8
+        - MySQL 8.0.x
             - https://dev.mysql.com/downloads/mysql/
-            - Descargar el instalador .dmg para macOS.
+            - Descargar el instalador .dmg para macOS para la versión 8.0.x
             - Instalar con las opciones por defecto.
             - Preferencias del sistema -> MySQL -> Elegir "Start MySQL when your computer starts up".
             - Más información: https://dev.mysql.com/doc/refman/8.0/en/macos-installation.html

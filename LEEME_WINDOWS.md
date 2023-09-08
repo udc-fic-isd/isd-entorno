@@ -25,9 +25,9 @@
           https://www.jetbrains.com/es-es/community/education/#students). 
     - Instalar usando las opciones por defecto.
 	 
-- Descargar e instalar MySQL 8:
+- Descargar e instalar MySQL 8.0.x:
     - https://dev.mysql.com/downloads/mysql/
-        + Descargar el instalador .msi para Windows
+        + Descargar el instalador .msi para Windows de la versión 8.0.x
     - Instalar en la ruta por defecto.
     - Elegir "Server only" o "Custom" (para instalar Server + Workbench) y usar 
      las opciones por defecto.
