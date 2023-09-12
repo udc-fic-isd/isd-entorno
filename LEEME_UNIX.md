@@ -72,7 +72,7 @@
     - Instalar como paquete el compilador de Apache Thrift:
         - Se puede instalar de forma sencilla usando cualquiera de los dos siguientes gestores de paquetes: Homebrew o MacPorts.
         - Si no tienes ninguno de estos gestores de paquetes en tu macOS, instala uno de ellos (preferentemente Homebrew):
-            - Instalación de Homebrew: https://brew.sh/index_es.
+            - Instalación de Homebrew: https://brew.sh.
             - Instalación de MacPorts: https://www.macports.org/install.php.
         - Instalación de Thrift con Homebrew:
             - brew install thrift
