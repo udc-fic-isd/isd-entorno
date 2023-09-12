@@ -184,9 +184,14 @@
     mysqld
 ```
 
-> NOTA: En los siguientes pasos, al ejecutar los comandos  `mysqladmin` y `myqsl` 
+> NOTA 1: En los siguientes pasos, al ejecutar los comandos  `mysqladmin` y `myqsl` 
   con la opción `-p` la password que nos solicitarán es la del usuario
-  root que se especificó al instalar MySQL.
+  `root` que se especificó al instalar MySQL.
+
+> NOTA 2: Si el instalador de MySQL 8.0.x en Linux no nos permitió configurar la 
+  contraseña del usuario `root` durante la instalación, los siguientes comandos 
+  deben ejecutarse con el comando `sudo` delante para que no nos soliciten la 
+  contraseña del usuario `root` de MySQL.
 
 - Creación de bases de datos ws y wstest (abrir en una consola diferente)
 
