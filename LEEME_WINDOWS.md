@@ -10,7 +10,7 @@
     - Maven 3.9.x o superior 
         + https://maven.apache.org/download.cgi
         + Descargar el "Binary zip archive"
-    - Tomcat 10.0.x 
+    - Tomcat 10.x.y 
       + https://tomcat.apache.org/download-10.cgi
       + En el apartado "Binary Distributions" / "Core" descargar el zip.
 
@@ -145,13 +145,13 @@
 
 ## Configuración de Tomcat
 
-- Copiar el driver JDBC de MySQL al directorio `C:\software\apache-tomcat-10.0.x\lib`
+- Copiar el driver JDBC de MySQL al directorio `C:\software\apache-tomcat-10.x.y\lib`
     - El driver JDBC se puede obtener de la siguiente ruta (siempre y cuando se hayan compilado previamente 
     los ejemplos):
      `%HOME%\.m2\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar`
 
 - Definir un data source con nombre `jdbc/ws-javaexamples-ds`
-    - Añadir las siguientes líneas al fichero `C:\software\apache-tomcat-10.0.x\conf\server.xml`, 
+    - Añadir las siguientes líneas al fichero `C:\software\apache-tomcat-10.x.y\conf\server.xml`, 
       dentro de la etiqueta `<GlobalNamingResources>`
  
       ```shell
@@ -171,7 +171,7 @@
                 logAbandoned="true"
                 validationQuery="SELECT 1"/>
 	  ```	
-    - Añadir las siguientes líneas al fichero `C:\software\apache-tomcat-10.0.x\conf\context.xml`, 
+    - Añadir las siguientes líneas al fichero `C:\software\apache-tomcat-10.x.y\conf\context.xml`, 
       dentro de la etiqueta `<Context>`
 
       ```shell
