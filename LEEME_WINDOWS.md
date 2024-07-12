@@ -14,7 +14,7 @@
       + https://tomcat.apache.org/download-10.cgi
       + En el apartado "Binary Distributions" / "Core" descargar el zip.
 
-- Descargar e instalar la última versión LTS de Eclipse Temurin (JDK 17)
+- Descargar e instalar la última versión LTS de Eclipse Temurin (JDK 21)
     - https://adoptium.net
     - Descargar el instalador .msi para Windows e instalar usando las opciones por defecto.
 
@@ -25,12 +25,11 @@
           https://www.jetbrains.com/es-es/community/education/#students). 
     - Instalar usando las opciones por defecto.
 	 
-- Descargar e instalar MySQL 8.0.x:
+- Descargar e instalar MySQL 8.4.x:
     - https://dev.mysql.com/downloads/mysql/
-        + Descargar el instalador .msi para Windows de la versión 8.0.x
+        + Descargar el instalador .msi para Windows de la versión 8.4.x
     - Instalar en la ruta por defecto.
-    - Elegir "Server only" o "Custom" (para instalar Server + Workbench) y usar 
-     las opciones por defecto.
+    - Elegir "Typical" y usar las opciones por defecto.
     - Después de la instalación, se ejecutará el wizard de Configuración de 
      MySQL Server. 
          + Utilizar las opciones por defecto excepto la contraseña para el 
@@ -40,7 +39,7 @@
          está marcada, para que se instale como servicio Windows.
 
 - Descargar e instalar el compilador de Apache Thrift:
-     - http://www.apache.org/dyn/closer.cgi?path=/thrift/0.19.0/thrift-0.19.0.exe
+     - http://www.apache.org/dyn/closer.cgi?path=/thrift/0.19.0/thrift-0.20.0.exe
      - Renombrar el ejecutable a thrift.exe y copiarlo dentro del directorio bin que hay 
      dentro del directorio donde se descomprimió Maven 
      
@@ -58,16 +57,16 @@
   variables de entorno (para cada una pulsar en "Nueva ...", introducir el 
   nombre y el valor, y pulsar "Aceptar")
     - Nombre: `JAVA_HOME`
-        + Valor: Directorio donde se instaló Eclipse Temurin (JDK 17)
-        + Por ejemplo:`C:\Program Files\Eclipse Adoptium\jdk-17.0.8.101-hotspot`
+        + Valor: Directorio donde se instaló Eclipse Temurin (JDK 21)
+        + Por ejemplo:`C:\Program Files\Eclipse Adoptium\jdk-21.0.3.9-hotspot`
     - Nombre: `MAVEN_HOME`
         + Valor: Directorio donde se descomprimió Maven
-        + Por ejemplo: `C:\software\apache-maven-3.9.4`
+        + Por ejemplo: `C:\software\apache-maven-3.9.8`
     - Nombre: `MAVEN_OPTS`
         + Valor: `-Xms512m -Xmx1024m`
     - Nombre: `MYSQL_HOME`
         + Valor: Directorio donde se instaló MySQL
-        + Por ejemplo: `C:\Program Files\MySQL\MySQL Server 8.0`
+        + Por ejemplo: `C:\Program Files\MySQL\MySQL Server 8.4`
 
 - En la sección "Variables de usuario para `<user>`", modificar la variable de
   entorno `PATH`. Para ello hay que seleccionarla, pulsar en "Editar..." y 

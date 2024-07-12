@@ -13,17 +13,18 @@
                 + Se puede utilizar la versión Community (libre) o la versión Ultimate
                   (solicitando una licencia para estudiantes según se indica en
                   https://www.jetbrains.com/es-es/community/education/#students).
-        - Última versión LTS de Eclipse Temurin (JDK 17)
+        - Última versión LTS de Eclipse Temurin (JDK 21)
             - https://adoptium.net
             - Descargar el arhivo .tar.gz.
     - Instalar como paquete
-        - MySQL 8.0.x
-            - Seguir las instrucciones que se indican en 
-              https://dev.mysql.com/doc/refman/8.0/en/linux-installation.html para instalar
-              la versión 8.0.x
+        - MySQL versión 8.4.x o versión 8.0.x
+            - Para instalar la versión 8.4.x seguir las instrucciones que se indican en 
+              https://dev.mysql.com/doc/refman/8.4/en/linux-installation.html 
+            - Para instalar la versión 8.0.x seguir las instrucciones que se indican en 
+              https://dev.mysql.com/doc/refman/8.0/en/linux-installation.html
     - Instalar el compilador de Apache Thrift
-        > NOTA: La versión recomendada es la 0.19.0, pero se puede instalar cualquier versión
-          comprendida entre la 0.10.0 y la 0.19.0
+        > NOTA: La versión recomendada es la 0.20.0, pero se puede instalar cualquier versión
+          comprendida entre la 0.10.0 y la 0.20.0
         - Instalarlo como paquete si está disponible para la distribución Linux utilizada
             - Ubuntu
                - sudo apt-get update -y
@@ -33,16 +34,16 @@
             - Debian
                - Descargar paquete de https://packages.debian.org/sid/thrift-compiler e instalarlo
         - En otro caso, seguir las instrucciones de https://thrift.apache.org/docs/install/
-        - IMPORTANTE: Si no se ha instalado la versión 0.19.0 (para saber la versión instalada basta con ejecutar
+        - IMPORTANTE: Si no se ha instalado la versión 0.20.0 (para saber la versión instalada basta con ejecutar
           `thrift -version`) es necesario crear o modificar el fichero `$HOME/.m2/settings.xml` para indicar la 
-          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.18.1, el fichero debería tener el
+          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.19.0, el fichero debería tener el
           siguiente contenido (en caso de que el fichero ya exista, hay que añadir la etiqueta `<activeProfiles>` 
           dentro de la etiqueta `<settings>`):   
 
             ```shell
             <settings>
                 <activeProfiles>
-                    <activeProfile>thrift-0.18.1</activeProfile>
+                    <activeProfile>thrift-0.19.0</activeProfile>
                 </activeProfiles>
             </settings>
             ```
@@ -60,15 +61,17 @@
                   (solicitando una licencia para estudiantes según se indica en
                   https://www.jetbrains.com/es-es/community/education/#students).
             - Instalar usando las opciones por defecto.
-        - Última versión LTS de Eclipse Temurin (JDK 17)
+        - Última versión LTS de Eclipse Temurin (JDK 21)
             - https://adoptium.net
             - Descargar el instalador .pkg e instalar usando las opciones por defecto.
-        - MySQL 8.0.x
+        - MySQL versión 8.4.x o versión 8.0.x
             - https://dev.mysql.com/downloads/mysql/
-            - Descargar el instalador .dmg para macOS para la versión 8.0.x
+            - Descargar el instalador .dmg para macOS para la versión 8.4.x o 8.0.x
             - Instalar con las opciones por defecto.
             - Preferencias del sistema -> MySQL -> Elegir "Start MySQL when your computer starts up".
-            - Más información: https://dev.mysql.com/doc/refman/8.0/en/macos-installation.html
+            - Más información: 
+			     https://dev.mysql.com/doc/refman/8.4/en/macos-installation.html
+				 https://dev.mysql.com/doc/refman/8.0/en/macos-installation.html
     - Instalar como paquete el compilador de Apache Thrift:
         - Se puede instalar de forma sencilla usando cualquiera de los dos siguientes gestores de paquetes: Homebrew o MacPorts.
         - Si no tienes ninguno de estos gestores de paquetes en tu macOS, instala uno de ellos (preferentemente Homebrew):
@@ -78,16 +81,16 @@
             - brew install thrift
         - Instalación de Thrift con MacPorts:
             - sudo port install thrift
-        - IMPORTANTE: Si no se ha instalado la versión 0.19.0 (para saber la versión instalada basta con ejecutar
+        - IMPORTANTE: Si no se ha instalado la versión 0.20.0 (para saber la versión instalada basta con ejecutar
           `thrift -version`) es necesario crear o modificar el fichero `$HOME/.m2/settings.xml` para indicar la
-          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.18.1, el fichero debería tener el
+          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.19.0, el fichero debería tener el
           siguiente contenido (en caso de que el fichero ya exista, hay que añadir la etiqueta `<activeProfiles>`
           dentro de la etiqueta `<settings>`):
 
             ```shell
             <settings>
                 <activeProfiles>
-                    <activeProfile>thrift-0.18.1</activeProfile>
+                    <activeProfile>thrift-0.19.0</activeProfile>
                 </activeProfiles>
             </settings>
             ```
@@ -104,7 +107,7 @@
 
 ```shell
     cd $HOME/software
-    tar zxf ws-javaexamples-3.7.0-src.tar.gz
+    tar zxf ws-javaexamples-3.8.0-src.tar.gz
 ```
 
 ## [Linux] Establecer variables de entorno
@@ -115,11 +118,11 @@
 
 ```shell
     # Eclipse Temurin
-    export JAVA_HOME=$HOME/software/jdk-17.0.8.1+1
+    export JAVA_HOME=$HOME/software/jdk-21.0.3+9
     PATH=$JAVA_HOME/bin:$PATH
 
     # Maven
-    MAVEN_HOME=$HOME/software/apache-maven-3.9.4
+    MAVEN_HOME=$HOME/software/apache-maven-3.9.8
     PATH=$MAVEN_HOME/bin:$PATH
     export MAVEN_OPTS="-Xms512m -Xmx1024m"
 
@@ -151,12 +154,12 @@
   directorios donde se haya descomprimido Maven e instalado Eclipse Temurin respectivamente
 
 ```shell
-    # Eclipse Temurin (JDK 17)
-    export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+    # Eclipse Temurin (JDK 21)
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
     PATH=$JAVA_HOME/bin:$PATH
     
     # Maven
-    MAVEN_HOME=$HOME/software/apache-maven-3.9.4
+    MAVEN_HOME=$HOME/software/apache-maven-3.9.8
     PATH=$MAVEN_HOME/bin:$PATH
     export MAVEN_OPTS="-Xms512m -Xmx1024m"
 
@@ -188,7 +191,7 @@
   con la opción `-p` la password que nos solicitarán es la del usuario
   `root` que se especificó al instalar MySQL.
 
-> NOTA 2: Si el instalador de MySQL 8.0.x en Linux no nos permitió configurar la 
+> NOTA 2: Si el instalador de MySQL en Linux no nos permitió configurar la 
   contraseña del usuario `root` durante la instalación, los siguientes comandos 
   deben ejecutarse con el comando `sudo` delante para que no nos soliciten la 
   contraseña del usuario `root` de MySQL.
@@ -225,7 +228,7 @@
 - Inicialización de la base de datos y compilación de los ejemplos
 
 ```shell
-    cd $HOME/software/ws-javaexamples-3.7.0
+    cd $HOME/software/ws-javaexamples-3.8.0
     mvn sql:execute install
 ```
     
@@ -246,7 +249,7 @@
 
 - Copiar el driver JDBC de MySQL al directorio `$HOME/software/apache-tomcat-10.0.x/lib`
     - El driver JDBC se puede obtener de la siguiente ruta (siempre y cuando se hayan compilado previamente los ejemplos):
-     `$HOME/.m2/repository/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar`
+     `$HOME/.m2/repository/com/mysql/mysql-connector-j/9.0.0/mysql-connector-j-9.0.0.jar`
 
 - Definir un data source con nombre `jdbc/ws-javaexamples-ds`
     - Añadir las siguientes líneas al fichero `$HOME/software/apache-tomcat-10.x.y/conf/server.xml`, 
