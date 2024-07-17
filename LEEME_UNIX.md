@@ -247,7 +247,7 @@
 
 - Copiar el driver JDBC de MySQL al directorio `$HOME/software/apache-tomcat-10.0.x/lib`
     - El driver JDBC se puede obtener de la siguiente ruta (siempre y cuando se hayan compilado previamente los ejemplos):
-     `$HOME/.m2/repository/com/mysql/mysql-connector-j/9.0.0/mysql-connector-j-9.0.0.jar`
+     `$HOME/.m2/repository/com/mysql/mysql-connector-j/8.4.0/mysql-connector-j-8.4.0.jar`
 
 - Definir un data source con nombre `jdbc/ws-javaexamples-ds`
     - Añadir las siguientes líneas al fichero `$HOME/software/apache-tomcat-10.x.y/conf/server.xml`, 
