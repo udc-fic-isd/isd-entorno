@@ -138,6 +138,7 @@
     which mvn
     which mysql
     which idea.sh
+    which thrift
 ```
 
 ## [macOS] Establecer variables de entorno
@@ -174,6 +175,7 @@
     which java
     which mvn
     which mysql
+    which thrift
 ```
     
 ## Creación de bases de datos necesarias para los ejemplos
