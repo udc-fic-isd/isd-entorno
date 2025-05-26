@@ -142,11 +142,7 @@
 ```
 
 ## [macOS] Establecer variables de entorno
-> NOTA: asumiendo que la aplicación Terminal use el shell de inicio de sesión,
-  éste será "zsh" (macOS 10.15 o superior) o "bash" (versiones anteriores de macOS).
-
-- Añadir al fichero `$HOME/.zshrc` (macOS 10.15 o superior) o 
-  `$HOME/.bash_profile` (versiones anteriores de macOS) lo siguiente:
+- Añadir al fichero `$HOME/.zshrc` lo siguiente:
 
 > NOTA: Los valores de las variables MAVEN_HOME y JAVA_HOME deben sustituirse por los 
   directorios donde se haya descomprimido Maven e instalado Eclipse Temurin respectivamente
