@@ -292,9 +292,7 @@
      
 - Instalación en macOS
     - https://git-scm.com/downloads
-    - Hacer clic en "macOS". En la siguiente pantalla hacer clic en "installer"
-      dentro de la sección "Binary Installer" y descargar la última versión del instalador .dmg.
-    - Instalar con las opciones por defecto.
+    - Hacer clic en "macOS" e instalar como se indica.
 
 - Configuración básica (Linux y macOS)
 
