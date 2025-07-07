@@ -1,4 +1,4 @@
-# Instalación / Configuración entorno ISD / 2024-2025 - Linux y macOS
+# Instalación / Configuración entorno ISD / 2025-2026 - Linux y macOS
 -------------------------------------------------------------------------------
 
 ## Descargar e instalar el SW

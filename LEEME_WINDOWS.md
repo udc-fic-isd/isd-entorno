@@ -1,4 +1,4 @@
-# Instalación / Configuración entorno ISD / 2024-2025 - Windows
+# Instalación / Configuración entorno ISD / 2025-2026 - Windows
 -------------------------------------------------------------------------------
 
 ## Descargar e instalar el SW
