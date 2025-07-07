@@ -10,8 +10,8 @@
     - Maven 3.9.x o superior 
         + https://maven.apache.org/download.cgi
         + Descargar el "Binary zip archive"
-    - Tomcat 10.x.y 
-      + https://tomcat.apache.org/download-10.cgi
+    - Tomcat 11.x.y 
+      + https://tomcat.apache.org/download-11.cgi
       + En el apartado "Binary Distributions" / "Core" descargar el zip.
 
 - Descargar e instalar la última versión LTS de Eclipse Temurin (JDK 21)
@@ -38,8 +38,8 @@
          + Comprobar que la opción "Start the MySQL Server at System Startup"
          está marcada, para que se instale como servicio Windows.
 
-- Descargar e instalar el compilador de Apache Thrift:
-     - http://www.apache.org/dyn/closer.cgi?path=/thrift/0.20.0/thrift-0.20.0.exe
+- Descargar el compilador de Apache Thrift:
+     - http://www.apache.org/dyn/closer.cgi?path=/thrift/0.22.0/thrift-0.22.0.exe
      - Renombrar el ejecutable a thrift.exe y copiarlo dentro del directorio bin que hay 
      dentro del directorio donde se descomprimió Maven 
      
@@ -58,10 +58,10 @@
   nombre y el valor, y pulsar "Aceptar")
     - Nombre: `JAVA_HOME`
         + Valor: Directorio donde se instaló Eclipse Temurin (JDK 21)
-        + Por ejemplo:`C:\Program Files\Eclipse Adoptium\jdk-21.0.3.9-hotspot`
+        + Por ejemplo:`C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot`
     - Nombre: `MAVEN_HOME`
         + Valor: Directorio donde se descomprimió Maven
-        + Por ejemplo: `C:\software\apache-maven-3.9.8`
+        + Por ejemplo: `C:\software\apache-maven-3.9.10`
     - Nombre: `MAVEN_OPTS`
         + Valor: `-Xms512m -Xmx1024m`
     - Nombre: `MYSQL_HOME`
@@ -133,7 +133,7 @@
 - Inicialización de la base de datos y compilación de los ejemplos
 
 ```shell
-    cd C:/software/ws-javaexamples-3.8.0
+    cd C:/software/ws-javaexamples-3.9.0
     mvn sql:execute install
 ```
 	

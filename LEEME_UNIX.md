@@ -5,9 +5,6 @@
   
 - [Linux] 
     - Descargar y descomprimir en `$HOME/software` el siguiente software
-        - Maven 3.9.x o superior 
-            - https://maven.apache.org/download.cgi
-            - Descargar el "Binary tar.gz archive".
         - IntelliJ IDEA
             - https://www.jetbrains.com/es-es/idea/download
                 + Se puede utilizar la versión Community (libre) o la versión Ultimate
@@ -21,8 +18,8 @@
             - Seguir las instrucciones que se indican en 
               https://dev.mysql.com/doc/refman/8.4/en/linux-installation.html para instalar la versión 8.4.x. 
     - Instalar el compilador de Apache Thrift
-        > NOTA: La versión recomendada es la 0.20.0, pero se puede instalar cualquier versión
-          comprendida entre la 0.10.0 y la 0.20.0
+        > NOTA: La versión recomendada es la 0.22.0, pero se puede instalar cualquier versión
+          comprendida entre la 0.13.0 y la 0.22.0
         - Instalarlo como paquete si está disponible para la distribución Linux utilizada
             - Ubuntu
                - sudo apt-get update -y
@@ -32,25 +29,21 @@
             - Debian
                - Descargar paquete de https://packages.debian.org/sid/thrift-compiler e instalarlo
         - En otro caso, seguir las instrucciones de https://thrift.apache.org/docs/install/
-        - IMPORTANTE: Si no se ha instalado la versión 0.20.0 (para saber la versión instalada basta con ejecutar
+        - IMPORTANTE: Si no se ha instalado la versión 0.22.0 (para saber la versión instalada basta con ejecutar
           `thrift -version`) es necesario crear o modificar el fichero `$HOME/.m2/settings.xml` para indicar la 
-          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.19.0, el fichero debería tener el
+          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.21.0, el fichero debería tener el
           siguiente contenido (en caso de que el fichero ya exista, hay que añadir la etiqueta `<activeProfiles>` 
           dentro de la etiqueta `<settings>`):   
 
             ```shell
             <settings>
                 <activeProfiles>
-                    <activeProfile>thrift-0.19.0</activeProfile>
+                    <activeProfile>thrift-0.21.0</activeProfile>
                 </activeProfiles>
             </settings>
             ```
 
 - [macOS] 
-    - Descargar y descomprimir en `$HOME/software`
-        - Maven 3.9.x o superior 
-            - https://maven.apache.org/download.cgi
-            - Descargar el "Binary tar.gz archive"
     - Deescargar e instalar
         - IntelliJ IDEA
             - https://www.jetbrains.com/es-es/idea/download
@@ -78,24 +71,28 @@
             - brew install thrift
         - Instalación de Thrift con MacPorts:
             - sudo port install thrift
-        - IMPORTANTE: Si no se ha instalado la versión 0.20.0 (para saber la versión instalada basta con ejecutar
+        - IMPORTANTE: Si no se ha instalado la versión 0.22.0 (para saber la versión instalada basta con ejecutar
           `thrift -version`) es necesario crear o modificar el fichero `$HOME/.m2/settings.xml` para indicar la
-          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.19.0, el fichero debería tener el
+          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.21.0, el fichero debería tener el
           siguiente contenido (en caso de que el fichero ya exista, hay que añadir la etiqueta `<activeProfiles>`
           dentro de la etiqueta `<settings>`):
 
             ```shell
             <settings>
                 <activeProfiles>
-                    <activeProfile>thrift-0.19.0</activeProfile>
+                    <activeProfile>thrift-0.21.0</activeProfile>
                 </activeProfiles>
             </settings>
             ```
 
-- [Linux y macOS] Descargar y descomprimir en `$HOME/software` el siguiente software
-    - Tomcat 10.x.y 
-        + https://tomcat.apache.org/download-10.cgi
-        + En el apartado "Binary Distributions" / "Core" descargar el .tar.gz.
+- [Linux y macOS] 
+   - Descargar y descomprimir en `$HOME/software` el siguiente software
+       - Maven 3.9.x o superior
+           - https://maven.apache.org/download.cgi
+           - Descargar el "Binary tar.gz archive".
+       - Tomcat 11.x.y 
+           - https://tomcat.apache.org/download-11.cgi
+           - En el apartado "Binary Distributions" / "Core" descargar el .tar.gz.
          
 ## Descargar y descomprimir los ejemplos de la asignatura
 - Descargar en `$HOME/software`
@@ -104,7 +101,7 @@
 
 ```shell
     cd $HOME/software
-    tar zxf ws-javaexamples-3.8.0-src.tar.gz
+    tar zxf ws-javaexamples-3.9.0-src.tar.gz
 ```
 
 ## [Linux] Establecer variables de entorno
@@ -115,11 +112,11 @@
 
 ```shell
     # Eclipse Temurin
-    export JAVA_HOME=$HOME/software/jdk-21.0.3+9
+    export JAVA_HOME=$HOME/software/jdk-21.0.7+6
     PATH=$JAVA_HOME/bin:$PATH
 
     # Maven
-    MAVEN_HOME=$HOME/software/apache-maven-3.9.8
+    MAVEN_HOME=$HOME/software/apache-maven-3.9.10
     PATH=$MAVEN_HOME/bin:$PATH
     export MAVEN_OPTS="-Xms512m -Xmx1024m"
 
@@ -153,7 +150,7 @@
     PATH=$JAVA_HOME/bin:$PATH
     
     # Maven
-    MAVEN_HOME=$HOME/software/apache-maven-3.9.8
+    MAVEN_HOME=$HOME/software/apache-maven-3.9.10
     PATH=$MAVEN_HOME/bin:$PATH
     export MAVEN_OPTS="-Xms512m -Xmx1024m"
 
