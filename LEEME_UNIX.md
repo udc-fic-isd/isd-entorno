@@ -44,7 +44,7 @@
             ```
 
 - [macOS] 
-    - Deescargar e instalar
+    - Descargar e instalar
         - IntelliJ IDEA
             - https://www.jetbrains.com/es-es/idea/download
                 + Descargar el instalador .dmg para macOS
