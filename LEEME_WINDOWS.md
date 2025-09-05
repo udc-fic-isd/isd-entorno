@@ -86,7 +86,7 @@
 	java -version
 	mvn -version
 	mysqld --version
-        thrift --version
+	thrift --version
 ```
 
 ## Creación de bases de datos necesarias para los ejemplos
