@@ -220,7 +220,7 @@
 - Inicialización de la base de datos y compilación de los ejemplos
 
 ```shell
-    cd $HOME/software/ws-javaexamples-3.8.0
+    cd $HOME/software/ws-javaexamples-3.9.0
     mvn sql:execute install
 ```
     
