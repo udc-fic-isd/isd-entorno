@@ -17,6 +17,9 @@
         - MySQL 8.4.x 
             - Seguir las instrucciones que se indican en 
               https://dev.mysql.com/doc/refman/8.4/en/linux-installation.html para instalar la versión 8.4.x. 
+        - Git
+            - https://git-scm.com/downloads
+            - Hacer clic en "Linux/Unix" e instalar como se indica.
     - Instalar el compilador de Apache Thrift
         > NOTA: La versión recomendada es la 0.22.0, pero se puede instalar cualquier versión
           comprendida entre la 0.13.0 y la 0.22.0
@@ -62,6 +65,9 @@
             - Preferencias del sistema -> MySQL -> Elegir "Start MySQL when your computer starts up".
             - Más información: 
 			     https://dev.mysql.com/doc/refman/8.4/en/macos-installation.html
+        - Git
+            - https://git-scm.com/downloads
+            - Hacer clic en "macOS" e instalar como se indica.
     - Instalar como paquete el compilador de Apache Thrift:
         - Se puede instalar de forma sencilla usando cualquiera de los dos siguientes gestores de paquetes: Homebrew o MacPorts.
         - Si no tienes ninguno de estos gestores de paquetes en tu macOS, instala uno de ellos (preferentemente Homebrew):
@@ -275,19 +281,9 @@
 >siguiendo los pasos del fichero `README.md` que se encuentra en el directorio raíz de los ejemplos
 
       
-## Instalación y configuración básica de Git
+## Configuración básica de Git
 ---------------------------------------------------------------------
 > NOTA: Este paso no es necesario si ya se utilizó y configuró Git en otras asignaturas
-
-- Instalación en Linux
-    - https://git-scm.com/downloads
-    - Hacer clic en "Linux/Unix" y seguir las instrucciones según la distribución de linux utilizada.
-     
-- Instalación en macOS
-    - https://git-scm.com/downloads
-    - Hacer clic en "macOS" e instalar como se indica.
-
-- Configuración básica (Linux y macOS)
 
 ```shell
     git config --global user.email "your_email@udc.es"

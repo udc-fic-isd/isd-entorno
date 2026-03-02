@@ -42,6 +42,10 @@
      - http://www.apache.org/dyn/closer.cgi?path=/thrift/0.22.0/thrift-0.22.0.exe
      - Renombrar el ejecutable a thrift.exe y copiarlo dentro del directorio bin que hay 
      dentro del directorio donde se descomprimió Maven 
+
+- Descargar e instalar Git
+     - https://git-scm.com/downloads
+     - Hacer clic en "Windows" e instalar como se indica.
      
 ## Descargar y descomprimir los ejemplos de la asignatura 
 
@@ -182,15 +186,8 @@
 >siguiendo los pasos del fichero `README.md` que se encuentra en el directorio raíz de los ejemplos
 
     
-## Instalación y configuración básica de Git
+## Configuración básica de Git
 > NOTA: Este paso no es necesario si ya se utilizó y configuró Git en otras asignaturas
-
-- Descargar e instalar Git
-    - https://git-scm.com/downloads
-    - Hacer clic en "Windows" para descargar.
-    - Instalar con las opciones por defecto.
-
-- Configuración básica
 
 > NOTA: `$GIT_HOME` debe sustituirse por la ruta donde se instaló git.
 
