@@ -258,7 +258,7 @@
       <Resource name="jdbc/ws-javaexamples-ds"
                 auth="Container"
                 type="javax.sql.DataSource"
-                driverClassName="com.mysql.jdbc.Driver"
+                driverClassName="com.mysql.cj.jdbc.Driver"
                 url= "jdbc:mysql://localhost/ws?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=Europe/Madrid"
                 username="ws"
                 password="ws"
