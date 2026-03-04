@@ -167,13 +167,15 @@
                 url= "jdbc:mysql://localhost/ws?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=Europe/Madrid"
                 username="ws"
                 password="ws"
-                maxActive="4"
+                maxTotal="4"
                 maxIdle="2"
-                maxWait="10000"
-                removeAbandoned="true"
+                maxWaitMillis="10000"
+                removeAbandonedOnBorrow="true"
                 removeAbandonedTimeout="60"
                 logAbandoned="true"
-                validationQuery="SELECT 1"/>
+                testOnBorrow="true"
+                validationQuery=""
+                validationQueryTimeout="5"/>      
 	  ```	
     - Añadir las siguientes líneas al fichero `C:\software\apache-tomcat-11.x.y\conf\context.xml`, 
       dentro de la etiqueta `<Context>`
