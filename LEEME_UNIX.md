@@ -1,38 +1,38 @@
-# Instalación / Configuración entorno ISD / 2025-2026 - Linux y macOS
+# Instalación / Configuración entorno ISD / 2026-2027 - Linux y macOS
 -------------------------------------------------------------------------------
 
 ## Descargar e instalar el SW
   
 - [Linux] 
-    - Descargar y descomprimir en `$HOME/software` el siguiente software
-        - IntelliJ IDEA
+    - Descargar y descomprimir en `$HOME/software` el siguiente software:
+        - IntelliJ IDEA:
             - https://www.jetbrains.com/es-es/idea/download
                 + Se puede utilizar la versión libre o solicitar una licencia para
                   estudiantes en https://www.jetbrains.com/es-es/community/education/#students).
-        - Temurin JDK 25 LTS
+        - Temurin JDK 25 LTS:
             - https://adoptium.net/es/temurin/releases?version=25&os=any&arch=any
             - Descargar el arhivo .tar.gz.
-    - Instalar como paquete
-        - MySQL 9.7.x LTS
+    - Instalar como paquete:
+        - MySQL 9.7.x LTS:
             - Para Debian y Ubuntu, seguir las instrucciones que se indican en 
               https://dev.mysql.com/doc/refman/9.7/en/linux-installation-apt-repo.html para instalar la versión
               9.7.x LTS.
             - Para otras distribuciones de Linux, seguir las instrucciones que se indican en 
               https://dev.mysql.com/doc/refman/9.7/en/linux-installation.html para instalar la versión 9.7.x LTS.
-        - Git
+        - Git:
             - https://git-scm.com/downloads
             - Hacer clic en "Linux/Unix" e instalar como se indica.
-    - Instalar el compilador de Apache Thrift
+    - Instalar el compilador de Apache Thrift:
         > NOTA: La versión recomendada es la 0.22.0, pero se puede instalar cualquier versión
           comprendida entre la 0.13.0 y la 0.22.0
-        - Instalarlo como paquete si está disponible para la distribución Linux utilizada
-            - Ubuntu
-               - sudo apt-get update -y
-               - sudo apt-get install -y thrift-compiler 
-            - Alpine, ALT Linux, Arch Linux, CentOS, Fedora, FreeBSD, Mageia, NetBSD, openSUSE, Void Linux
-               - Descargar paquete de https://pkgs.org/download/thrift e instalarlo
-            - Debian
-               - Descargar paquete de https://packages.debian.org/sid/thrift-compiler e instalarlo
+        - Instalarlo como paquete si está disponible para la distribución Linux utilizada:
+            - Ubuntu:
+               - `sudo apt-get update -y`
+               - `sudo apt-get install -y thrift-compiler` 
+            - Alpine, ALT Linux, Arch Linux, CentOS, Fedora, FreeBSD, Mageia, NetBSD, openSUSE, Void Linux:
+               - Descargar paquete de https://pkgs.org/download/thrift e instalarlo.
+            - Debian:
+               - Descargar paquete de https://packages.debian.org/sid/thrift-compiler e instalarlo.
         - En otro caso, seguir las instrucciones de https://thrift.apache.org/docs/install/
         - IMPORTANTE: Si no se ha instalado la versión 0.22.0 (para saber la versión instalada basta con ejecutar
           `thrift -version`) es necesario crear o modificar el fichero `$HOME/.m2/settings.xml` para indicar la 
@@ -49,33 +49,33 @@
             ```
 
 - [macOS] 
-    - Descargar e instalar
-        - IntelliJ IDEA
+    - Descargar e instalar:
+        - IntelliJ IDEA:
             - https://www.jetbrains.com/es-es/idea/download
-                + Descargar el instalador .dmg para macOS
+                + Descargar el instalador .dmg para macOS.
                 + Se puede utilizar la versión libre o solicitar una licencia para
                 estudiantes en https://www.jetbrains.com/es-es/community/education/#students).
             - Instalar usando las opciones por defecto.
-        - Temurin JDK 25 LTS
+        - Temurin JDK 25 LTS:
             - https://adoptium.net/es/temurin/releases?version=25&os=any&arch=any
             - Descargar el instalador .pkg e instalar usando las opciones por defecto.
-        - MySQL 9.7.x LTS
+        - MySQL 9.7.x LTS:
             - https://dev.mysql.com/downloads/mysql/
             - Descargar el instalador .dmg para la versión 9.7.x LTS e instalar usando las opciones por defecto.
             - Preferencias del sistema -> MySQL -> Elegir "Start MySQL when your computer starts up".
             - Más información: https://dev.mysql.com/doc/refman/9.7/en/macos-installation.html.
-        - Git
+        - Git:
             - https://git-scm.com/downloads
-            - Hacer clic en "macOS" e instalar como se indica.
+            - Hacer clic en "macOS" e instalar como se indica..
     - Instalar como paquete el compilador de Apache Thrift:
         - Se puede instalar de forma sencilla usando cualquiera de los dos siguientes gestores de paquetes: Homebrew o MacPorts.
         - Si no tienes ninguno de estos gestores de paquetes en tu macOS, instala uno de ellos (preferentemente Homebrew):
-            - Instalación de Homebrew: https://brew.sh.
-            - Instalación de MacPorts: https://www.macports.org/install.php.
+            - Instalación de Homebrew: https://brew.sh
+            - Instalación de MacPorts: https://www.macports.org/install.php
         - Instalación de Thrift con Homebrew:
-            - brew install thrift
+            - `brew install thrift`
         - Instalación de Thrift con MacPorts:
-            - sudo port install thrift
+            - `sudo port install thrift`
         - IMPORTANTE: Si no se ha instalado la versión 0.22.0 (para saber la versión instalada basta con ejecutar
           `thrift -version`) es necesario crear o modificar el fichero `$HOME/.m2/settings.xml` para indicar la
           versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.21.0, el fichero debería tener el
@@ -91,18 +91,20 @@
             ```
 
 - [Linux y macOS] 
-   - Descargar y descomprimir en `$HOME/software` el siguiente software
-       - Maven 3.9.x o superior
+   - Descargar y descomprimir en `$HOME/software` el siguiente software:
+       - Maven 3.9.x o superior:
            - https://maven.apache.org/download.cgi
            - Descargar el "Binary tar.gz archive".
-       - Tomcat 11.x.y 
+       - Tomcat 11.x.y :
            - https://tomcat.apache.org/download-11.cgi
            - En el apartado "Binary Distributions" / "Core" descargar el .tar.gz.
          
 ## Descargar y descomprimir los ejemplos de la asignatura
+
+> Disponibles en el campus online
+ 
 - Descargar en `$HOME/software`
 
-> Disponibles en moodle
 
 ```shell
     cd $HOME/software
@@ -110,13 +112,13 @@
 ```
 
 ## [Linux] Establecer variables de entorno
-- Añadir al fichero `$HOME/.bashrc` lo siguiente 
+- Añadir al fichero `$HOME/.bashrc` lo siguiente:
 
 > NOTA: Los valores de las variables MAVEN_HOME, IDEA_HOME y JAVA_HOME deben sustituirse por los 
-  directorios donde se haya descomprimido Maven e IntelliJ IDEA, e instalado Eclipse Temurin, respectivamente
+  directorios donde se haya descomprimido Maven e IntelliJ IDEA, e instalado Temurin JDK, respectivamente
 
 ```shell
-    # Temurin
+    # Temurin JDK
     export JAVA_HOME=$HOME/software/jdk-25.0.3+9
     PATH=$JAVA_HOME/bin:$PATH
 
@@ -130,10 +132,10 @@
     PATH=$IDEA_HOME/bin:$PATH
 ```
 
-- Cerrar todos los terminales y abrir terminales nuevos
+- Cerrar todos los terminales y abrir terminales nuevos.
 
 - Comprobar que el entorno ha quedado correctamente configurado comprobando 
-  las salidas de los siguientes comandos
+  las salidas de los siguientes comandos:
 
 ```shell
     which java
@@ -147,10 +149,10 @@
 - Añadir al fichero `$HOME/.zshrc` lo siguiente:
 
 > NOTA: Los valores de las variables MAVEN_HOME y JAVA_HOME deben sustituirse por los 
-  directorios donde se haya descomprimido Maven e instalado Eclipse Temurin respectivamente
+  directorios donde se haya descomprimido Maven e instalado Temurin JDK respectivamente
 
 ```shell
-    # Eclipse Temurin (JDK 21)
+    # Temurin JDK 
     export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-25.jdk/Contents/Home
     PATH=$JAVA_HOME/bin:$PATH
     
@@ -159,15 +161,15 @@
     PATH=$MAVEN_HOME/bin:$PATH
     export MAVEN_OPTS="-Xms512m -Xmx1024m"
 
-    # MySQL.
+    # MySQL
     MYSQL_HOME=/usr/local/mysql
     PATH=$MYSQL_HOME/bin:$PATH
 ```
 
-- Cerrar todos los terminales y abrir terminales nuevos
+- Cerrar todos los terminales y abrir terminales nuevos.
 
 - Comprobar que el entorno ha quedado correctamente configurado comprobando 
-  las salidas de los siguientes comandos
+  las salidas de los siguientes comandos:
 
 ```shell
     which java
@@ -178,7 +180,7 @@
     
 ## Creación de bases de datos necesarias para los ejemplos
 
-- Arrancar MySQL (sólo si el arranque no es automático)
+- Arrancar MySQL (sólo si el arranque no es automático):
 
 ```shell
     mysqld
@@ -193,14 +195,14 @@
   deben ejecutarse con el comando `sudo` delante para que no nos soliciten la 
   contraseña del usuario `root` de MySQL.
 
-- Creación de bases de datos ws y wstest (abrir en una consola diferente)
+- Creación de bases de datos ws y wstest (abrir en una consola diferente):
 
 ```shell
   mysqladmin -u root create ws -p
   mysqladmin -u root create wstest -p
 ```
 
-- Creación de usuario ws con password con permisos sobre ws y wstest
+- Creación de usuario ws con password con permisos sobre ws y wstest:
 
 ```shell
     mysql -u root -p
@@ -210,7 +212,7 @@
         exit
 ```
 
-- Comprobar acceso a BD
+- Comprobar acceso a BD:
 
 ```shell
     mysql -u ws --password=ws ws
@@ -222,7 +224,7 @@
         
 ## Inicialización de datos de ejemplo y compilación de los ejemplos
 
-- Inicialización de la base de datos y compilación de los ejemplos
+- Inicialización de la base de datos y compilación de los ejemplos:
 
 ```shell
     cd $HOME/software/ws-javaexamples-3.10.0
@@ -231,26 +233,26 @@
     
 ## Finalizar la ejecución de la BD
 
-- Finalizar la ejecución de la BD (sólo si el arranque no es automático)
+- Finalizar la ejecución de la BD (sólo si el arranque no es automático):
 
 ```shell
     mysqladmin -u root shutdown
 ```
 
 ## Configuración de IntelliJ IDEA
-- Se recomienda instalar el plugin de Thrift (lo sugerirá el editor al abrir un fichero .thrift)
+- Se recomienda instalar el plugin de Thrift (lo sugerirá el editor al abrir un fichero .thrift).
 
 
 ## Configuración de Tomcat
-> NOTA: Se asume que Tomcat está descomprimido en el directorio `$HOME/software/apache-tomcat-11.x.y`
+> NOTA: Se asume que Tomcat está descomprimido en el directorio `$HOME/software/apache-tomcat-11.x.y`.
 
-- Copiar el driver JDBC de MySQL al directorio `$HOME/software/apache-tomcat-11.x.y/lib`
+- Copiar el driver JDBC de MySQL al directorio `$HOME/software/apache-tomcat-11.x.y/lib`.
     - El driver JDBC se puede obtener de la siguiente ruta (siempre y cuando se hayan compilado previamente los ejemplos):
-     `$HOME/.m2/repository/com/mysql/mysql-connector-j/9.7.0/mysql-connector-j-9.7.0.jar`
+     `$HOME/.m2/repository/com/mysql/mysql-connector-j/9.7.0/mysql-connector-j-9.7.0.jar`.
 
-- Definir un data source con nombre `jdbc/ws-javaexamples-ds`
+- Definir un data source con nombre `jdbc/ws-javaexamples-ds`:
     - Añadir las siguientes líneas al fichero `$HOME/software/apache-tomcat-11.x.y/conf/server.xml`, 
-      dentro de la etiqueta `<GlobalNamingResources>`
+      dentro de la etiqueta `<GlobalNamingResources>`:
 
       ```shell
       <!-- MySQL -->
@@ -272,66 +274,62 @@
                 validationQueryTimeout="5"/>      
 	  ```	
     - Añadir las siguientes líneas al fichero `$HOME/software/apache-tomcat-11.x.y/conf/context.xml`, 
-      dentro de la etiqueta `<Context>`
+      dentro de la etiqueta `<Context>`:
 
       ```shell
       <ResourceLink name="jdbc/ws-javaexamples-ds" global="jdbc/ws-javaexamples-ds"
                 type="javax.sql.DataSource"/>      
 	  ```	
 > NOTA: Para comprobar que Tomcat está correctamente configurado se puede ejecutar el ejemplo `ws-movies`
->siguiendo los pasos del fichero `README.md` que se encuentra en el directorio raíz de los ejemplos
+>siguiendo los pasos del fichero `README.md` que se encuentra en el directorio raíz de los ejemplos.
 
       
 ## Configuración básica de Git
----------------------------------------------------------------------
-> NOTA: Este paso no es necesario si ya se utilizó y configuró Git en otras asignaturas
+> NOTA: Este paso no es necesario si ya se utilizó y configuró Git en otras asignaturas.
 
 ```shell
     git config --global user.email "your_email@udc.es"
     git config --global user.name "Your Name"
 ```
 
-> El siguiente comando ilustra como configurar Sublime como editor por defecto de Git, aunque se puede utilizar otro editor instalado en el sistema operativo.
+  - El siguiente comando ilustra como configurar Sublime como editor por defecto de Git, aunque se puede utilizar otro editor instalado en el sistema operativo:
 
 ```shell
     git config --global core.editor "subl -w"
 ```
 
-- (Opcional) Instalación de utilidad de autocompletado para Git
+- (Opcional) Instalación de utilidad de autocompletado para Git:
     - Seguir las instrucciones indicadas en https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion
 
 ## Creación y configuración de claves SSH
-> NOTA: Este paso no es necesario si ya utilizó Git con SSH en otras asignaturas
+> NOTA: Este paso no es necesario si ya utilizó Git con SSH en otras asignaturas.
 
 - Desde un terminal ejecutar:
 
-> Generar las claves en la ruta por defecto ($HOME/.ssh) y con los nombres 
-  por defecto
-       
 ```shell
     ssh-keygen -t rsa -b 4096 -C "your_email@udc.es"
 ```
 
+> Genera las claves en la ruta por defecto ($HOME/.ssh) y con los nombres por defecto.
+
 ## Añadir clave SSH a GitHub
-> NOTA: Este paso no es necesario si ya se utilizó GitHub con SSH en otras asignaturas
+> NOTA: Este paso no es necesario si ya se utilizó GitHub con SSH en otras asignaturas.
 
 - Acceder a [https://github.com/settings/keys](https://github.com/settings/keys).
 - Clic en "New SSH Key" para añadir una nueva clave SSH.
 - En el campo "Title" ponerle un nombre.
 - En el campo "Key" copiar la clave pública, es decir, el contenido del fichero
-  `$HOME/.ssh/id_rsa.pub`
+  `$HOME/.ssh/id_rsa.pub`.
 - Clic en "Add SSH key".
 
-- Comprobar conexión SSH con el servidor de git y añadirlo a la lista de hosts 
-  conocidos 
+- Ejecutar el siguiente comando para comprobar conexión SSH con el servidor de git 
+  y añadirlo a la lista de hosts conocidos: 
   
-> Contestar "yes" a "Are you sure you want to continue connecting (yes/no)?"
-    
 ```shell
     ssh -T git@github.com
 ```
-
+> Contestar "yes" a "Are you sure you want to continue connecting (yes/no)?".
 
 ## Instalación de una herramienta cliente gráfica para Git (opcional)
 
-- Puede utilizarse cualquier herramienta cliente (https://git-scm.com/downloads/guis)
+- Puede utilizarse cualquier herramienta cliente (https://git-scm.com/downloads/guis).
