@@ -14,20 +14,19 @@
       + https://tomcat.apache.org/download-11.cgi
       + En el apartado "Binary Distributions" / "Core" descargar el zip.
 
-- Descargar e instalar la última versión LTS de Eclipse Temurin (JDK 21)
-    - https://adoptium.net
+- Descargar e instalar Temurin JDK 25 LTS
+    - https://adoptium.net/es/temurin/releases?version=25&os=any&arch=any
     - Descargar el instalador .msi para Windows e instalar usando las opciones por defecto.
 
 - Descargar e instalar IntelliJ IDEA
     - https://www.jetbrains.com/es-es/idea/download
-        + Se puede utilizar la versión Community (libre) o la versión Ultimate 
-          (solicitando una licencia para estudiantes según se indica en 
-          https://www.jetbrains.com/es-es/community/education/#students). 
+        + Se puede utilizar la versión libre o solicitar una licencia para
+          estudiantes en https://www.jetbrains.com/es-es/community/education/#students). 
     - Instalar usando las opciones por defecto.
 	 
-- Descargar e instalar MySQL 8.4.x:
+- Descargar e instalar MySQL 9.7.x LTS:
     - https://dev.mysql.com/downloads/mysql/
-        + Descargar el instalador .msi para Windows de la versión 8.4.x
+        + Descargar el instalador .msi para Windows de la versión 9.7.x
     - Instalar en la ruta por defecto.
     - Elegir "Typical" y usar las opciones por defecto.
     - Después de la instalación, se ejecutará el wizard de Configuración de 
@@ -62,15 +61,15 @@
   nombre y el valor, y pulsar "Aceptar")
     - Nombre: `JAVA_HOME`
         + Valor: Directorio donde se instaló Eclipse Temurin (JDK 21)
-        + Por ejemplo:`C:\Program Files\Eclipse Adoptium\jdk-21.0.7.6-hotspot`
+        + Por ejemplo:`C:\Program Files\Eclipse Adoptium\jdk-25.0.2.10-hotspot`
     - Nombre: `MAVEN_HOME`
         + Valor: Directorio donde se descomprimió Maven
-        + Por ejemplo: `C:\software\apache-maven-3.9.10`
+        + Por ejemplo: `C:\software\apache-maven-3.9.15`
     - Nombre: `MAVEN_OPTS`
         + Valor: `-Xms512m -Xmx1024m`
     - Nombre: `MYSQL_HOME`
         + Valor: Directorio donde se instaló MySQL
-        + Por ejemplo: `C:\Program Files\MySQL\MySQL Server 8.4`
+        + Por ejemplo: `C:\Program Files\MySQL\MySQL Server 9.7`
 
 - En la sección "Variables de usuario para `<user>`", modificar la variable de
   entorno `PATH`. Para ello hay que seleccionarla, pulsar en "Editar..." y 
@@ -137,7 +136,7 @@
 - Inicialización de la base de datos y compilación de los ejemplos
 
 ```shell
-    cd C:/software/ws-javaexamples-3.9.0
+    cd C:/software/ws-javaexamples-3.10.0
     mvn sql:execute install
 ```
 	
@@ -152,7 +151,7 @@
 - Copiar el driver JDBC de MySQL al directorio `C:\software\apache-tomcat-11.x.y\lib`
     - El driver JDBC se puede obtener de la siguiente ruta (siempre y cuando se hayan compilado previamente 
     los ejemplos):
-     `%HOME%\.m2\repository\com\mysql\mysql-connector-j\8.4.0\mysql-connector-j-8.4.0.jar`
+     `%HOME%\.m2\repository\com\mysql\mysql-connector-j\8.7.0\mysql-connector-j-9.7.0.jar`
 
 - Definir un data source con nombre `jdbc/ws-javaexamples-ds`
     - Añadir las siguientes líneas al fichero `C:\software\apache-tomcat-11.x.y\conf\server.xml`, 

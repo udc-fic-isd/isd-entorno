@@ -7,16 +7,18 @@
     - Descargar y descomprimir en `$HOME/software` el siguiente software
         - IntelliJ IDEA
             - https://www.jetbrains.com/es-es/idea/download
-                + Se puede utilizar la versión Community (libre) o la versión Ultimate
-                  (solicitando una licencia para estudiantes según se indica en
-                  https://www.jetbrains.com/es-es/community/education/#students).
-        - Última versión LTS de Eclipse Temurin (JDK 21)
-            - https://adoptium.net
+                + Se puede utilizar la versión libre o solicitar una licencia para
+                  estudiantes en https://www.jetbrains.com/es-es/community/education/#students).
+        - Temurin JDK 25 LTS
+            - https://adoptium.net/es/temurin/releases?version=25&os=any&arch=any
             - Descargar el arhivo .tar.gz.
     - Instalar como paquete
-        - MySQL 8.4.x 
-            - Seguir las instrucciones que se indican en 
-              https://dev.mysql.com/doc/refman/8.4/en/linux-installation.html para instalar la versión 8.4.x. 
+        - MySQL 9.7.x LTS
+            - Para Debian y Ubuntu, seguir las instrucciones que se indican en 
+              https://dev.mysql.com/doc/refman/9.7/en/linux-installation-apt-repo.html para instalar la versión
+              9.7.x LTS.
+            - Para otras distribuciones de Linux, seguir las instrucciones que se indican en 
+              https://dev.mysql.com/doc/refman/9.7/en/linux-installation.html para instalar la versión 9.7.x LTS.
         - Git
             - https://git-scm.com/downloads
             - Hacer clic en "Linux/Unix" e instalar como se indica.
@@ -51,20 +53,17 @@
         - IntelliJ IDEA
             - https://www.jetbrains.com/es-es/idea/download
                 + Descargar el instalador .dmg para macOS
-                + NOTA: se puede utilizar la versión Community (libre) o la versión Ultimate
-                  (solicitando una licencia para estudiantes según se indica en
-                  https://www.jetbrains.com/es-es/community/education/#students).
+                + Se puede utilizar la versión libre o solicitar una licencia para
+                estudiantes en https://www.jetbrains.com/es-es/community/education/#students).
             - Instalar usando las opciones por defecto.
-        - Última versión LTS de Eclipse Temurin (JDK 21)
-            - https://adoptium.net
+        - Temurin JDK 25 LTS
+            - https://adoptium.net/es/temurin/releases?version=25&os=any&arch=any
             - Descargar el instalador .pkg e instalar usando las opciones por defecto.
-        - MySQL versión 8.4.x
+        - MySQL 9.7.x LTS
             - https://dev.mysql.com/downloads/mysql/
-            - Descargar el instalador .dmg para macOS para la versión 8.4.x
-            - Instalar con las opciones por defecto.
+            - Descargar el instalador .dmg para la versión 9.7.x LTS e instalar usando las opciones por defecto.
             - Preferencias del sistema -> MySQL -> Elegir "Start MySQL when your computer starts up".
-            - Más información: 
-			     https://dev.mysql.com/doc/refman/8.4/en/macos-installation.html
+            - Más información: https://dev.mysql.com/doc/refman/9.7/en/macos-installation.html.
         - Git
             - https://git-scm.com/downloads
             - Hacer clic en "macOS" e instalar como se indica.
@@ -107,7 +106,7 @@
 
 ```shell
     cd $HOME/software
-    tar zxf ws-javaexamples-3.9.0-src.tar.gz
+    tar zxf ws-javaexamples-3.10.0-src.tar.gz
 ```
 
 ## [Linux] Establecer variables de entorno
@@ -117,12 +116,12 @@
   directorios donde se haya descomprimido Maven e IntelliJ IDEA, e instalado Eclipse Temurin, respectivamente
 
 ```shell
-    # Eclipse Temurin
-    export JAVA_HOME=$HOME/software/jdk-21.0.7+6
+    # Temurin
+    export JAVA_HOME=$HOME/software/jdk-25.0.3+9
     PATH=$JAVA_HOME/bin:$PATH
 
     # Maven
-    MAVEN_HOME=$HOME/software/apache-maven-3.9.10
+    MAVEN_HOME=$HOME/software/apache-maven-3.9.15
     PATH=$MAVEN_HOME/bin:$PATH
     export MAVEN_OPTS="-Xms512m -Xmx1024m"
 
@@ -152,11 +151,11 @@
 
 ```shell
     # Eclipse Temurin (JDK 21)
-    export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-25.jdk/Contents/Home
     PATH=$JAVA_HOME/bin:$PATH
     
     # Maven
-    MAVEN_HOME=$HOME/software/apache-maven-3.9.10
+    MAVEN_HOME=$HOME/software/apache-maven-3.9.15
     PATH=$MAVEN_HOME/bin:$PATH
     export MAVEN_OPTS="-Xms512m -Xmx1024m"
 
@@ -226,7 +225,7 @@
 - Inicialización de la base de datos y compilación de los ejemplos
 
 ```shell
-    cd $HOME/software/ws-javaexamples-3.9.0
+    cd $HOME/software/ws-javaexamples-3.10.0
     mvn sql:execute install
 ```
     
@@ -247,7 +246,7 @@
 
 - Copiar el driver JDBC de MySQL al directorio `$HOME/software/apache-tomcat-11.x.y/lib`
     - El driver JDBC se puede obtener de la siguiente ruta (siempre y cuando se hayan compilado previamente los ejemplos):
-     `$HOME/.m2/repository/com/mysql/mysql-connector-j/8.4.0/mysql-connector-j-8.4.0.jar`
+     `$HOME/.m2/repository/com/mysql/mysql-connector-j/9.7.0/mysql-connector-j-9.7.0.jar`
 
 - Definir un data source con nombre `jdbc/ws-javaexamples-ds`
     - Añadir las siguientes líneas al fichero `$HOME/software/apache-tomcat-11.x.y/conf/server.xml`, 
