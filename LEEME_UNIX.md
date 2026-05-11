@@ -23,8 +23,8 @@
             - https://git-scm.com/downloads
             - Hacer clic en "Linux/Unix" e instalar como se indica.
     - Instalar el compilador de Apache Thrift:
-        > NOTA: La versión recomendada es la 0.22.0, pero se puede instalar cualquier versión
-          comprendida entre la 0.13.0 y la 0.22.0
+        > NOTA: La versión recomendada es la 0.23.0, pero se puede instalar cualquier versión
+          comprendida entre la 0.13.0 y la 0.23.0
         - Instalarlo como paquete si está disponible para la distribución Linux utilizada:
             - Ubuntu:
                - `sudo apt-get update -y`
@@ -34,16 +34,16 @@
             - Debian:
                - Descargar paquete de https://packages.debian.org/sid/thrift-compiler e instalarlo.
         - En otro caso, seguir las instrucciones de https://thrift.apache.org/docs/install/
-        - IMPORTANTE: Si no se ha instalado la versión 0.22.0 (para saber la versión instalada basta con ejecutar
+        - IMPORTANTE: Si no se ha instalado la versión 0.23.0 (para saber la versión instalada basta con ejecutar
           `thrift -version`) es necesario crear o modificar el fichero `$HOME/.m2/settings.xml` para indicar la 
-          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.21.0, el fichero debería tener el
+          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.22.0, el fichero debería tener el
           siguiente contenido (en caso de que el fichero ya exista, hay que añadir la etiqueta `<activeProfiles>` 
           dentro de la etiqueta `<settings>`):   
 
             ```shell
             <settings>
                 <activeProfiles>
-                    <activeProfile>thrift-0.21.0</activeProfile>
+                    <activeProfile>thrift-0.22.0</activeProfile>
                 </activeProfiles>
             </settings>
             ```
@@ -76,16 +76,16 @@
             - `brew install thrift`
         - Instalación de Thrift con MacPorts:
             - `sudo port install thrift`
-        - IMPORTANTE: Si no se ha instalado la versión 0.22.0 (para saber la versión instalada basta con ejecutar
+        - IMPORTANTE: Si no se ha instalado la versión 0.23.0 (para saber la versión instalada basta con ejecutar
           `thrift -version`) es necesario crear o modificar el fichero `$HOME/.m2/settings.xml` para indicar la
-          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.21.0, el fichero debería tener el
+          versión de Thrift que se va a utilizar. Por ejemplo, para la versión 0.22.0, el fichero debería tener el
           siguiente contenido (en caso de que el fichero ya exista, hay que añadir la etiqueta `<activeProfiles>`
           dentro de la etiqueta `<settings>`):
 
             ```shell
             <settings>
                 <activeProfiles>
-                    <activeProfile>thrift-0.21.0</activeProfile>
+                    <activeProfile>thrift-0.22.0</activeProfile>
                 </activeProfiles>
             </settings>
             ```
